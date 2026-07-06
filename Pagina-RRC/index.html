@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autos Explorer</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="header-contenido">
+    <h1>Autos Explorer</h1>
+    <div class="controles">
+      <input type="text" id="busqueda" placeholder="Buscar marca...">
+      <select id="genero">
+        <option value="">Todos los catálogos</option>
+        <option value="Japonesas">Japonesas</option>
+        <option value="Alemanas">Alemanas</option>
+        <option value="Americanas">Americanas</option>
+        <option value="Italianas">Italianas</option>
+        <option value="Coreanas">Coreanas</option>
+        <option value="Británicas">Británicas</option>
+      </select>
+    </div>
+  </div>
+</header>
+<main>
+  <p id="contador"></p>
+  <div id="grilla" class="grilla"></div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
