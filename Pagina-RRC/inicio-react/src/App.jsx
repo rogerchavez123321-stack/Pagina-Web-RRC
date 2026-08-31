@@ -7,6 +7,9 @@ import Persona from "./components/Persona";
 import Perfil from "./components/Perfil";
 import TarjetaPelicula from "./components/TarjetaPelicula";
 import Contador from "./components/Contador";
+import Acordeon from "./components/Acordeon";
+import Buscador from "./components/Buscador";
+import ListaCompras from "./components/ListaCompras";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,7 +18,8 @@ function App() {
     { id: 2, titulo: "The Dark Knight", año: 2008, vista: true },
     { id: 3, titulo: "Inception", año: 2010, vista: false },
     { id: 4, titulo: "Oppenheimer", año: 2023, vista: true },
-  ];
+  ]
+
   return (
     <>
       <div>
@@ -25,7 +29,9 @@ function App() {
           lenguajes={["JavaScript", "React", "CSS"]}
         />
       </div>
+
       <Persona nombre="Roger" apellido="Chavez" />
+
       <div>
         <h2>Lista de Películas</h2>
         {peliculas.map((peli) => (
@@ -37,9 +43,32 @@ function App() {
           />
         ))}
       </div>
+
       <div>
         <Contador />
       </div>
+
+      <section>
+        <h2>Preguntas Frecuentes</h2>
+        <Acordeon
+          titulo="¿Qué es React?"
+          contenido="React es una librería de JavaScript para construir interfaces de usuario."
+        />
+        <Acordeon
+          titulo="¿Qué es un State?"
+          contenido="El estado es una estructura de datos que representa la situación actual del componente."
+        />
+      </section>
+
+      <section>
+        <h2>Buscador de Frutas</h2>
+        <Buscador />
+      </section>
+
+      <section>
+        <h2>Lista de Compras</h2>
+        <ListaCompras />
+      </section>
 
       <section id="center">
         <div className="hero">
